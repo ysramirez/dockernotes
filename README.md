@@ -25,4 +25,9 @@ Download containers
 $ docker pull [container]
 ```
 
+IP container
+-------------------
+``` bash
+$  docker inspect --format '{{ .NetworkSettings.IPAddress }}' [id container]
+```
 
