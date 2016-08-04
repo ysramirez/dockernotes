@@ -5,7 +5,7 @@ services:
     container_name: final-app
     image: php:latest
     volumes:
-      - ../06_php_code:/var/www/html/
+      - ../code/06_php:/var/www/html/
     depends_on:
       - mysql
   mysql:
@@ -14,5 +14,5 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=1234
     volumes:
-      - ../06_mysql_data:/var/lib/mysql
+      - ../mysql_data/06:/var/lib/mysql
 

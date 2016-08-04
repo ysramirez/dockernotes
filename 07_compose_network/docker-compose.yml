@@ -5,7 +5,7 @@ services:
     container_name: final-app
     image: php:latest
     volumes:
-      - ../07_php_code:/var/www/html/
+      - ../code/07_php:/var/www/html/
     depends_on:
       - mysql
     networks:
@@ -17,7 +17,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=1234
     volumes:
-      - ../07_mysql_data:/var/lib/mysql
+      - ../mysql_data/07:/var/lib/mysql
     networks:
       my_net:
         ipv4_address: 172.28.5.11
