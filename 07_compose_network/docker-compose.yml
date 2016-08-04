@@ -17,7 +17,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=1234
     volumes:
-      - /home/aprendephp/docker_training/notes/07_compose_network /data_dir:/var/lib/mysql
+      - /home/aprendephp/docker_training/notes/07_compose_network/data_dir:/var/lib/mysql
     networks:
       my_net:
         ipv4_address: 172.28.5.11
