@@ -5,7 +5,7 @@ services:
     container_name: final-app
     image: php:latest
     volumes:
-      - ../07_code:/var/www/html/
+      - ../07_php_code:/var/www/html/
     depends_on:
       - mysql
     networks:
