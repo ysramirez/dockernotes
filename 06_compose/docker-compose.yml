@@ -5,7 +5,7 @@ services:
     container_name: final-app
     image: php:latest
     volumes:
-      - /home/aprendephp/docker_training/notes/06_compose/localfiles/:/var/www/html/
+      - ../06_php_code:/var/www/html/
     depends_on:
       - mysql
   mysql:
@@ -14,5 +14,5 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=1234
     volumes:
-      - ../data_dir:/var/lib/mysql
+      - ../06_mysql_data:/var/lib/mysql
 

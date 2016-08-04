@@ -5,7 +5,7 @@ services:
     container_name: final-app
     image: php:latest
     volumes:
-      - /home/aprendephp/docker_training/notes/07_compose_network/localfiles/:/var/www/html/
+      - ../07_code:/var/www/html/
     depends_on:
       - mysql
     networks:
@@ -17,7 +17,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=1234
     volumes:
-      - ../data_dir:/var/lib/mysql
+      - ../07_mysql_data:/var/lib/mysql
     networks:
       my_net:
         ipv4_address: 172.28.5.11
