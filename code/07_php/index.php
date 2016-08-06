@@ -1,9 +1,7 @@
 <?php
-echo "hola";
-/*
-$servername = "172.18.0.2";
+$servername = $_ENV["MYSQL_APP_PORT_3306_TCP_ADDR"];
 $username = "root";
-$password = "1234";
+$password = $_ENV["MYSQL_APP_ENV_MYSQL_ROOT_PASSWORD"];
 
 // Create connection
 $conn = new \mysqli($servername, $username, $password);
@@ -21,4 +19,3 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-*/
