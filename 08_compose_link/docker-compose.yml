@@ -8,11 +8,15 @@ services:
     volumes:
       - ../mysql_data/07:/var/lib/mysql
     network_mode: "bridge"
+    ports:
+      - "9080:3306"
   php:
     container_name: final-app
-    image: php:latest
+    image: php-ext-mysql:01
     volumes:
       - ../code/07_php:/var/www/html/
     links:
       - mysql
     network_mode: "bridge"
+    ports:
+      - "9000:80"
