@@ -19,4 +19,4 @@ services:
       - mysql
     network_mode: "bridge"
     ports:
-      - "9000:80"
+      - "9090:80"
